@@ -1,5 +1,7 @@
 # Django settings for cc_django project.
 
+import os
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -103,10 +105,7 @@ ROOT_URLCONF = 'cc_django.urls'
 WSGI_APPLICATION = 'cc_django.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    'templates'
+    os.path.join(os.environ['APP_HOME'], 'templates'),
 )
 
 INSTALLED_APPS = (
