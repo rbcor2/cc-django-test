@@ -1,1 +1,14 @@
-Dummy Django 1.5 app on Clever-Cloud
+Dummy Django 1.9 app on Clever-Cloud
+
+## Clever-Cloud folder
+
+In order to deploy your app, you have to set a `python.json` file in a `clevercloud` directory.
+In the field `module`, you have to indicate the module that the server must run to start your application.
+
+```
+{
+	"deploy": {
+		"module":"cc_django.wsgi:application"
+	}
+}
+```
